@@ -23,6 +23,7 @@ import Profile from "./Header/Header";
 import { BiSearch } from "react-icons/bi";
 import Mainsection from "./Mainsection/Mainsection";
 import Drawers from "./Slider/Slider";
+import Header from "./Header/Header";
 // const drawerWidth = 240;
 
 export default function PermanentDrawerLeft() {
@@ -57,6 +58,7 @@ export default function PermanentDrawerLeft() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
+      {/* <Header /> */}
       {/* <AppBar
         className={header}
         position="fixed"
@@ -75,6 +77,7 @@ export default function PermanentDrawerLeft() {
         </div>
       </AppBar> */}
       <Drawers />
+      {/* <Mainsection /> */}
       {/* <Drawer
         className="drawer-d"
         style={{ width: "drawerWidth", transition: " width 1s  all" }}
@@ -128,7 +131,7 @@ export default function PermanentDrawerLeft() {
           ))}
         </List>
       </Drawer> */}
-      <Box
+      {/* <Box
         component="main"
         // sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
 
@@ -160,7 +163,7 @@ export default function PermanentDrawerLeft() {
           <div> Powered by Global Trendz</div>
           <div>Copyright © 2021 Vahani </div>
         </div>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

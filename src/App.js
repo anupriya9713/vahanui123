@@ -1,10 +1,14 @@
-import Admin from "./Components/Adminpanel/Adminpanel";
+import Router from "./Components/Router";
 import "./App.css";
+
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Admin />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </div>
   );
 }
