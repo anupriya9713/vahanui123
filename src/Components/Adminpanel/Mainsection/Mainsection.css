@@ -12,7 +12,9 @@
   border-radius: 16px;
   box-shadow: none;
   text-align: center;
-  background-color: rgb(200, 250, 205);
+  background-color: rgb(209, 233, 252);
+
+  /* background-color: rgb(200, 250, 205); */
   /* padding: 0px 20px; */
 }
 .main-top-left-cont {

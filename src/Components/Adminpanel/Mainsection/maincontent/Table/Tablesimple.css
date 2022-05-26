@@ -1,26 +1,24 @@
 .table-head {
   display: flex;
   align-items: center;
-  padding: 24px 24px 0px;
-  margin-bottom: 24px;
-  margin: 0px;
+  padding: 30px 24px;
+
   font-weight: 700;
   font-size: 1.125rem;
 }
 .tablesimple-head {
-  /* padding-left: 24px; */
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  box-shadow: rgb(255 255 255) 8px 0px 0px inset;
+  background-color: rgb(244, 246, 248);
+}
+.tablecell-head {
+  font-weight: 700 !important;
+  font-size: 1rem !important;
   line-height: 1.5rem;
-  font-size: 0.875rem;
-  font-family: "Public Sans", sans-serif;
-  font-weight: 600;
+  letter-spacing: 0.01071em;
+  border: 0px !important;
   /* display: table-cell;
   vertical-align: inherit;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
   text-align: left;
   padding: 16px; */
-  border-bottom: none;
-  color: rgb(99, 115, 129);
-  background-color: rgb(244, 246, 248);
+  color: rgb(99, 115, 129) !important;
 }

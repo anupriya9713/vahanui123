@@ -28,54 +28,70 @@ const rows = [
 
 export default function BasicTable() {
   return (
-    <TableContainer component={Paper}>
-      <div className="table-head">New Registration List</div>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead className="tablesimple-head">
-          <TableRow>
-            <TableCell style={{ border: "0px" }}>
-              Dessert(100g serving)
-            </TableCell>
-            <TableCell align="right" style={{ border: "0px" }}>
-              Calories
-            </TableCell>
-            <TableCell align="right" style={{ border: "0px" }}>
-              Fat&nbsp;(g)
-            </TableCell>
-            <TableCell align="right" style={{ border: "0px" }}>
-              Carbs&nbsp;(g)
-            </TableCell>
-            <TableCell align="right" style={{ border: "0px" }}>
-              Protein&nbsp;(g)
-            </TableCell>
-          </TableRow>
-        </TableHead>
-
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell scope="row" style={{ border: "0px" }}>
-                {row.name}
-              </TableCell>
-              <TableCell align="right" style={{ border: "0px" }}>
-                {row.calories}
-              </TableCell>
-              <TableCell align="right" style={{ border: "0px" }}>
-                {row.fat}
-              </TableCell>
-              <TableCell align="right" style={{ border: "0px" }}>
-                {row.carbs}
-              </TableCell>
-              <TableCell align="right" style={{ border: "0px" }}>
-                {row.protein}
-              </TableCell>
+    <>
+      <TableContainer component={Paper}>
+        <div className="table-head">New Registration List</div>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead className="tablesimple-head">
+            <TableRow>
+              <TableCell className="tablecell-head">Dessert</TableCell>
+              <TableCell className="tablecell-head">Calories</TableCell>
+              <TableCell className="tablecell-head">Fat</TableCell>
+              <TableCell className="tablecell-head">Carbs</TableCell>
+              <TableCell className="tablecell-head">Protein</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow
+                key={row.name}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <TableCell scope="row" style={{ border: "0px" }}>
+                  {row.name}
+                </TableCell>
+                <TableCell style={{ border: "0px" }}>{row.calories}</TableCell>
+                <TableCell style={{ border: "0px" }}>{row.fat}</TableCell>
+                <TableCell style={{ border: "0px" }}>{row.carbs}</TableCell>
+                <TableCell style={{ border: "0px" }}>{row.protein}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <div style={{ paddingTop: "28px" }}>
+        <TableContainer component={Paper}>
+          <div className="table-head">New Registration List</div>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Dessert (100g serving)</TableCell>
+                <TableCell align="right">Calories</TableCell>
+                <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                <TableCell align="right">Protein&nbsp;(g)</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.calories}</TableCell>
+                  <TableCell align="right">{row.fat}</TableCell>
+                  <TableCell align="right">{row.carbs}</TableCell>
+                  <TableCell align="right">{row.protein}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
+    </>
   );
 }

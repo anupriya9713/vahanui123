@@ -14,13 +14,16 @@ import Avatar from "@mui/material/Avatar";
 import Header from "../Header/Header";
 import Mainsection from "../Mainsection/Mainsection";
 import store from "../../../store";
+import { GoPrimitiveDot, GoChevronRight, GoChevronDown } from "react-icons/go";
+// import { IoIosArrowDown } from "react-icons/io";
+// IoIosArrowDown;
 
 export default function Slider() {
   const { drawerWidth, setdrawerWidth, Showdraw, setShowdraw } =
     useContext(store);
 
   const [open, setOpen] = useState(true);
-
+  const [subcat, setSubcat] = useState(false);
   const [topc, settopc] = useState("slidertop2");
 
   const handleDrawerOpen = () => {
@@ -34,6 +37,9 @@ export default function Slider() {
     setdrawerWidth(280);
   };
 
+  const showsub = () => {
+    setSubcat(!subcat);
+  };
   return (
     <>
       <Header />
@@ -79,16 +85,69 @@ export default function Slider() {
           </div>
 
           <List>
-            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon className="drawer-icon">
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon className="drawer-icon">
+                  <InboxIcon />
+                </ListItemIcon>
+                <ListItemText primary="Dashboard" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon className="drawer-icon">
+                  <InboxIcon />
+                </ListItemIcon>
+                <ListItemText primary="Dashboard" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon className="drawer-icon">
+                  <InboxIcon />
+                </ListItemIcon>
+                <ListItemText primary="Dashboard" />
+              </ListItemButton>
+            </ListItem>
+            {/* up down */}
+            <ListItem disablePadding onClick={showsub}>
+              <ListItemButton>
+                <ListItemIcon className="drawer-icon">
+                  <InboxIcon />
+                </ListItemIcon>
+                <ListItemText primary="Dashboard" />
+                {subcat ? (
+                  <ListItemIcon className="drawer-icon-arrow">
+                    <GoChevronDown style={{ fontSize: "1.8em" }} />
                   </ListItemIcon>
-                  {open ? <ListItemText primary={text} /> : null}
-                </ListItemButton>
-              </ListItem>
-            ))}
+                ) : (
+                  <ListItemIcon className="drawer-icon-arrow">
+                    <GoChevronRight style={{ fontSize: "1.8em" }} />
+                  </ListItemIcon>
+                )}
+              </ListItemButton>
+            </ListItem>
+            {subcat ? (
+              <div>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon className="drawer-icon">
+                      <GoPrimitiveDot />
+                    </ListItemIcon>
+                    <ListItemText primary="User" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon className="drawer-icon">
+                      <GoPrimitiveDot />
+                    </ListItemIcon>
+                    <ListItemText primary="Profile" />
+                  </ListItemButton>
+                </ListItem>
+              </div>
+            ) : null}
+            {/* updown */}
           </List>
         </Drawer>
       </div>
@@ -136,18 +195,14 @@ export default function Slider() {
             </div>
 
             <List>
-              {["Inbox", "Starred", "Send email", "Drafts"].map(
-                (text, index) => (
-                  <ListItem key={text} disablePadding>
-                    <ListItemButton>
-                      <ListItemIcon className="drawer-icon">
-                        {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                      </ListItemIcon>
-                      {open ? <ListItemText primary={text} /> : null}
-                    </ListItemButton>
-                  </ListItem>
-                )
-              )}
+              <ListItem>
+                <ListItemButton>
+                  <ListItemIcon className="drawer-icon">
+                    <InboxIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Dashboard" />
+                </ListItemButton>
+              </ListItem>
             </List>
           </Drawer>
         </div>

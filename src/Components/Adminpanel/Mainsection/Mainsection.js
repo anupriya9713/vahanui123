@@ -10,6 +10,13 @@ import Cardwhite from "./maincontent/Card/cardwhite";
 import Cardcolor from "./maincontent/Card/Cardcolor";
 import store from "../../../store";
 import Table from "./maincontent/Table/Tablesimple";
+import Donutsg from "./maincontent/Chart/donut";
+import Arealine from "./maincontent/Chart/Arealine";
+import Bar from "./maincontent/Chart/Bar";
+import Simplepie from "./maincontent/Chart/Simplepie";
+import Dashboard from "../../Dashboard/Dashboard";
+import { Route, Switch } from "react-router-dom";
+import Form from "../../Form/Form";
 
 export default function Mainsection() {
   const { drawerWidth, Showdraw, setShowdraw } = useContext(store);
@@ -33,7 +40,12 @@ export default function Mainsection() {
       >
         <Toolbar />
         <Typography className="ty-pd">
-          <div>
+          <Dashboard />
+          <Form />
+          {/* <Switch>
+            <Route path="/dashboard" component={Dashboard} exact />
+          </Switch> */}
+          {/* <div>
             <div className="row row-main-toppd m-0">
               <div className="col-md-8 main-top-left ">
                 <div className="main-top-left-cont">
@@ -100,7 +112,28 @@ export default function Mainsection() {
           </div>
           <div style={{ paddingTop: "28px" }}>
             <Table />
-          </div>
+          </div> */}
+          {/* <div style={{ paddingTop: "28px" }}>
+           
+            <div className="row">
+              <div className="col-lg-4">
+                <Donutsg />
+              </div>
+              <div className="col-lg-8">
+                <Arealine />
+              </div>
+            </div>
+          </div> */}
+          {/* <div style={{ paddingTop: "28px" }}>
+            <div className="row">
+              <div className="col-lg-4">
+                <Simplepie />
+              </div>
+              <div className="col-lg-8">
+                <Bar />
+              </div>
+            </div>
+          </div> */}
         </Typography>
 
         <div
