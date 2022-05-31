@@ -1,13 +1,21 @@
 import "../Form/Form.css";
+import React, { useState, useContext } from "react";
+
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Button, { ButtonProps } from "@mui/material/Button";
+import { AiOutlineCamera } from "react-icons/ai";
 // import Form from "react-bootstrap/Form";
 import TextField from "@mui/material/TextField";
 export default function Form() {
+  const [file, setFile] = useState();
+  function handleChange(e) {
+    console.log(e.target.files);
+    setFile(URL.createObjectURL(e.target.files[0]));
+  }
   return (
     <>
       <div>
@@ -155,6 +163,28 @@ export default function Form() {
               ></textarea>
             </div>
           </div>
+          <div className="image-card">
+            <div className="img-file-form">
+              <div className="img-button">
+                <input
+                  type="file"
+                  onChange={handleChange}
+                  className="input-file"
+                />
+                {!file ? (
+                  <div className="upload">
+                    <div>
+                      <AiOutlineCamera />
+                    </div>
+                    <div style={{ fontSize: "0.8rem" }}>upload profile</div>
+                  </div>
+                ) : (
+                  <img src={file} alt="img" style={{ width: "100%" }} />
+                )}
+              </div>
+            </div>
+          </div>
+
           <div className="but-width-form">
             <Button variant="contained" className="but-login-vahani">
               Save

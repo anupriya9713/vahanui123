@@ -8,11 +8,11 @@ function Router() {
   return (
     <>
       <Switch>
-        <Route path="/" component={Adminpanel} exact />
+        <Adminpanel />
         {/* <Route path="/dashboard" component={Dashboard} exact /> */}
         <Route path="/login" component={Login} exact />
-        <Route path="/register" component={Register} exact />
-        <Route path="/form" component={Form} exact />
+        {/* <Route path="/register" component={Register} exact />
+        <Route path="/form" component={Form} exact /> */}
 
         <Route component={Error} />
       </Switch>

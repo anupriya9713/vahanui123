@@ -1,0 +1,32 @@
+[
+    {
+     "filedtype":"email",
+      "required": "Required fields",
+  
+               "pattern": [
+                     {
+                 "value":"^/[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,}$/i",
+                 "message": "Invalid email address"
+                }
+               ]
+              },
+
+    {
+      "fieldtype":"name",
+      "required": "Required fields",
+      "maxLength":[
+          {
+                  "value": 4,
+                 " message": "max-charrrrrrrrrrrrrrrrrrr"
+                }
+           ],
+               "pattern": [
+                     {
+                 "value":"/^[A-Za-z]+$/i",
+                 "message": "Invalid phone"
+                }
+               ]
+              }
+    
+]
+

@@ -73,8 +73,25 @@ export default function Header() {
           }}
         >
           <div className="header-pd">
-            <div className="bisearch">
-              <BiSearch />
+            <div>
+              {/* <BiSearch /> */}
+              <div className="form-header">
+                <div>
+                  <ul>
+                    <li>
+                      <div className="text-li">Dashboard</div>
+                    </li>
+                    <li className="dots-li"></li>
+                    <li>
+                      <div className="text-li">E-Commerce</div>
+                    </li>
+                    <li className="dots-li"></li>
+                    <li>
+                      <div className="text-li">E-Commerce</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div>
               <Box

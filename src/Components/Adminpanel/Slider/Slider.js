@@ -72,7 +72,7 @@ export default function Slider() {
               </div>
             </div>
             <div>
-              <div className={topc}>
+              {/* <div className={topc}>
                 <Avatar alt="Remy Sharp" src="" className="slider-top-21" />
                 {open ? (
                   <div className="slider-top-213">
@@ -80,7 +80,7 @@ export default function Slider() {
                     <p className="slider-top21345">admin</p>
                   </div>
                 ) : null}
-              </div>
+              </div> */}
             </div>
           </div>
 

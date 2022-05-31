@@ -17,6 +17,7 @@ import Simplepie from "./maincontent/Chart/Simplepie";
 import Dashboard from "../../Dashboard/Dashboard";
 import { Route, Switch } from "react-router-dom";
 import Form from "../../Form/Form";
+import Persona from "../../Form/Personalinfo/Personalinfo";
 
 export default function Mainsection() {
   const { drawerWidth, Showdraw, setShowdraw } = useContext(store);
@@ -40,100 +41,13 @@ export default function Mainsection() {
       >
         <Toolbar />
         <Typography className="ty-pd">
-          <Dashboard />
-          <Form />
-          {/* <Switch>
-            <Route path="/dashboard" component={Dashboard} exact />
-          </Switch> */}
-          {/* <div>
-            <div className="row row-main-toppd m-0">
-              <div className="col-md-8 main-top-left ">
-                <div className="main-top-left-cont">
-                  <h4>Welcome back! Minimal UI</h4>
-                  <p>
-                    If you are going to use a passage of Lorem Ipsum, you need
-                    to be sure there isn't anything.
-                  </p>
-                </div>
-                <div className="main-top-right-cont">
-                  <img src={Scholar} alt="Scholar" />
-                </div>
-              </div>
-              <div className="col-md-4 main-top-right pe-0 ">
-                <img src={Scholar2} alt="Scholar" />
-              </div>
-            </div>
-          </div>
-
-          <div className="row m-0" style={{ paddingTop: "28px" }}>
-            <div className="col-md-3 ps-0 ">
-              <div className="col-card-main">
-                <div>
-                  <div className="icon-main">hii</div>
-                  <h6>Total Active Users</h6>
-                  <h3>18,765</h3>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 ">
-              {" "}
-              <div className="col-card-main">
-                <div>
-                  <div className="icon-main">hii</div>
-                  <h6>Total Active Users</h6>
-                  <h3>18,765</h3>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 ">
-              <div className="col-card-main">
-                <div className="icon-main">hii</div>
-                <div>
-                  <h6>Total Active Users</h6>
-                  <h3>18,765</h3>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 pe-0 ">
-              <div className="col-card-main">
-                <div className="icon-main">hii</div>
-                <div>
-                  <h6>Total Active Users</h6>
-                  <h3>18,765</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style={{ paddingTop: "28px" }}>
-            <Cardwhite />
-          </div>
-          <div style={{ paddingTop: "28px" }}>
-            <Cardcolor />
-          </div>
-          <div style={{ paddingTop: "28px" }}>
-            <Table />
-          </div> */}
-          {/* <div style={{ paddingTop: "28px" }}>
-           
-            <div className="row">
-              <div className="col-lg-4">
-                <Donutsg />
-              </div>
-              <div className="col-lg-8">
-                <Arealine />
-              </div>
-            </div>
-          </div> */}
-          {/* <div style={{ paddingTop: "28px" }}>
-            <div className="row">
-              <div className="col-lg-4">
-                <Simplepie />
-              </div>
-              <div className="col-lg-8">
-                <Bar />
-              </div>
-            </div>
-          </div> */}
+          {/* <Dashboard />
+          <Form /> */}
+          <Switch>
+            <Route path="/" component={Dashboard} exact />
+            <Route path="/form" component={Form} exact />
+            <Route path="/personalinformation" component={Persona} exact />
+          </Switch>
         </Typography>
 
         <div
